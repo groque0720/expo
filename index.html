@@ -24,6 +24,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="bg-slate-950 text-slate-100 selection:bg-brandGreen/30">
+  <div class="border-b border-white/10 bg-slate-900/95">
+    <div class="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-2 text-xs text-slate-200 sm:flex-row sm:items-center sm:justify-end sm:gap-5 md:px-8">
+      <a href="https://wa.me/543462620715" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 transition hover:text-brandGreen" aria-label="Abrir WhatsApp">
+        <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true">
+          <path d="M20.52 3.48A11.84 11.84 0 0 0 12.03 0C5.45 0 .1 5.35.1 11.93c0 2.1.55 4.16 1.6 5.97L0 24l6.28-1.64a11.9 11.9 0 0 0 5.74 1.47h.01c6.58 0 11.93-5.35 11.93-11.93 0-3.18-1.24-6.17-3.44-8.42ZM12.03 21.8h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.73.97 1-3.64-.24-.37a9.84 9.84 0 0 1-1.51-5.24c0-5.43 4.42-9.85 9.86-9.85 2.63 0 5.11 1.02 6.97 2.88a9.8 9.8 0 0 1 2.89 6.98c0 5.43-4.42 9.85-9.84 9.86Zm5.41-7.37c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.34.45-.51.15-.17.2-.3.3-.49.1-.2.05-.37-.02-.52-.08-.15-.66-1.6-.9-2.19-.24-.58-.49-.5-.66-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.49 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.21 5.08 4.5.71.31 1.26.49 1.7.63.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+        </svg>
+        <span>WhatsApp +5493462620715</span>
+      </a>
+
+      <a href="mailto:expoviviendas.directo@gmail.com" class="inline-flex items-center gap-2 transition hover:text-brandOrange" aria-label="Enviar correo">
+        <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true">
+          <path d="M2 5a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v.2L12 12 2 5.2V5Zm0 2.7V19a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7.7l-9.4 6.1a1 1 0 0 1-1.2 0L2 7.7Z"/>
+        </svg>
+        <span>expoviviendas.directo@gmail.com</span>
+      </a>
+    </div>
+  </div>
+
   <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/85 backdrop-blur-xl">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
       <a href="#inicio" class="flex items-center gap-3">
@@ -41,6 +59,10 @@
         <a href="#sponsors" class="transition hover:text-brandGreen">Sponsors</a> -->
       </nav>
 
+      <span class="hidden rounded-full border border-brandOrange/40 bg-brandOrange/10 px-3 py-1 text-xs font-semibold text-brandOrange lg:inline-flex">
+        Sitio en construcción
+      </span>
+
       <!-- <a href="#contacto" class="rounded-full bg-brandOrange px-4 py-2 text-sm font-semibold text-white transition hover:bg-brandOrange/90">
         Contacto
       </a> -->
@@ -54,6 +76,9 @@
         <div>
           <p class="mb-4 inline-flex rounded-full border border-brandGreen/30 bg-brandGreen/10 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-brandGreen">
             Edición 2026 · Próximamente
+          </p>
+          <p class="mb-4 inline-flex rounded-full border border-brandOrange/40 bg-brandOrange/10 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-brandOrange">
+            Sitio en construcción
           </p>
           <h1 class="text-3xl font-extrabold leading-tight text-white md:text-5xl">
             La gran expo de <span class="text-brandGreen">viviendas</span>,
@@ -211,7 +236,12 @@
   <footer id="contacto" class="border-t border-white/10 bg-slate-950">
     <div class="mx-auto flex max-w-7xl flex-col justify-between gap-3 px-5 py-8 text-sm text-slate-400 md:flex-row md:px-8">
       <p>© 2026 Expo Viviendas & Servicios · Sitio oficial</p>
-      <!-- <p>Contacto: info@expoviviendas.com · +54 11 4000 0000</p> -->
+      <p>
+        Contacto:
+        <a href="https://wa.me/543462620715" target="_blank" rel="noopener noreferrer" class="text-brandGreen transition hover:text-brandOrange">WhatsApp +5493462620715</a>
+        ·
+        <a href="mailto:expoviviendas.directo@gmail.com" class="text-brandGreen transition hover:text-brandOrange">expoviviendas.directo@gmail.com</a>
+      </p>
     </div>
   </footer>
 
