@@ -3,236 +3,417 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Expo Viviendas & Servicios | Próximamente</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-
-    body {
-      background: linear-gradient(135deg, #0f172a, #020617);
-      color: #e5e7eb;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    header {
-      width: 100%;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 600;
-      font-size: 20px;
-      letter-spacing: 1px;
-    }
-
-    .logo img {
-      height: 40px;
-      width: auto;
-    }
-
-    .container {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 40px 20px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .badge {
-      background: rgba(59, 130, 246, 0.15);
-      color: #93c5fd;
-      padding: 8px 16px;
-      border-radius: 999px;
-      font-size: 14px;
-      margin-bottom: 20px;
-      border: 1px solid rgba(59, 130, 246, 0.3);
-    }
-
-    h1 {
-      font-size: 48px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      line-height: 1.2;
-      background: linear-gradient(90deg, #ffffff, #94a3b8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    p.subtitle {
-      font-size: 18px;
-      color: #cbd5f5;
-      max-width: 700px;
-      margin-bottom: 40px;
-      line-height: 1.6;
-    }
-
-    .video-wrapper {
-      width: 100%;
-      max-width: 900px;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-      margin-bottom: 50px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .video-wrapper video,
-    .video-wrapper iframe {
-      width: 100%;
-      height: 500px;
-      border: none;
-      background: #000;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      width: 100%;
-      margin-top: 20px;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.04);
-      padding: 25px;
-      border-radius: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      transition: all 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(59, 130, 246, 0.4);
-      box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
-    }
-
-    .card h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
-      color: #f1f5f9;
-    }
-
-    .card p {
-      font-size: 15px;
-      color: #94a3b8;
-      line-height: 1.5;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      font-size: 14px;
-      color: #64748b;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      background: rgba(0, 0, 0, 0.2);
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 34px;
+  <title>Expo Viviendas & Servicios | Edición 2026</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandGreen: '#4fba54',
+            brandOrange: '#f66135',
+            brandDark: '#0f172a'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          }
+        }
       }
-
-      .video-wrapper video,
-      .video-wrapper iframe {
-        height: 260px;
-      }
-
-      header {
-        padding: 16px 20px;
-      }
-    }
-  </style>
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <div class="logo">
-      <!-- REEMPLAZA el src con tu logo -->
-      <img src="images/logo.png" alt="Logo Expo Viviendas" />
-      <span>Expo Viviendas & Servicios</span>
+<body class="bg-slate-950 text-slate-100 selection:bg-brandGreen/30">
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/85 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
+      <a href="#inicio" class="flex items-center gap-3">
+        <img src="images/logo.png" alt="Expo Viviendas y Servicios" class="h-10 w-auto rounded-md bg-white p-1" />
+        <div>
+          <p class="text-sm font-semibold leading-tight text-white">Expo Viviendas & Servicios</p>
+          <p class="text-xs text-slate-400">Construcción • Innovación • Hogar</p>
+        </div>
+      </a>
+
+      <nav class="hidden items-center gap-6 text-sm text-slate-300 md:flex">
+        <a href="#inicio" class="transition hover:text-brandGreen">Inicio</a>
+        <a href="#galeria" class="transition hover:text-brandGreen">Galería</a>
+        <!-- <a href="#marcas" class="transition hover:text-brandGreen">Marcas</a>
+        <a href="#sponsors" class="transition hover:text-brandGreen">Sponsors</a> -->
+      </nav>
+
+      <!-- <a href="#contacto" class="rounded-full bg-brandOrange px-4 py-2 text-sm font-semibold text-white transition hover:bg-brandOrange/90">
+        Contacto
+      </a> -->
     </div>
   </header>
 
-  <main class="container">
-    <div class="badge">Sitio en construcción</div>
+  <main id="inicio">
+    <section class="relative overflow-hidden border-b border-white/10">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(79,186,84,0.22),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(246,97,53,0.18),transparent_35%)]"></div>
+      <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 md:grid-cols-2 md:px-8 md:py-24">
+        <div>
+          <p class="mb-4 inline-flex rounded-full border border-brandGreen/30 bg-brandGreen/10 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-brandGreen">
+            Edición 2026 · Próximamente
+          </p>
+          <h1 class="text-3xl font-extrabold leading-tight text-white md:text-5xl">
+            La gran expo de <span class="text-brandGreen">viviendas</span>,
+            <span class="text-brandOrange">productos</span> y servicios para la construcción
+          </h1>
+          <p class="mt-5 max-w-xl text-base leading-relaxed text-slate-300 md:text-lg">
+            Un espacio profesional para conectar desarrolladores, constructoras, proveedores,
+            marcas y familias que buscan soluciones reales para construir, equipar y mejorar su hogar.
+          </p>
+          <!-- <div class="mt-8 flex flex-wrap items-center gap-4">
+            <a href="#galeria" class="rounded-full bg-brandGreen px-6 py-3 text-sm font-semibold text-white transition hover:bg-brandGreen/90">
+              Ver categorías
+            </a>
+            <a href="#sponsors" class="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:border-brandOrange hover:text-brandOrange">
+              Conocer sponsors
+            </a>
+          </div> -->
+        </div>
 
-    <h1>Próximamente: La Gran Expo de Viviendas, Servicios y Construcción 2026</h1>
-
-    <p class="subtitle">
-      Estamos preparando una experiencia única donde vas a encontrar las mejores soluciones en viviendas,
-      construcción, servicios, tecnología y oportunidades para el hogar y la inversión.
-      Muy pronto podrás explorar expositores, proyectos y novedades del sector en un solo lugar.
-    </p>
-
-    <div class="video-wrapper">
-      <!-- OPCIÓN 1: Video local -->
-      <!-- <video controls autoplay muted loop>
-        <source src="video.mp4" type="video/mp4">
-        Tu navegador no soporta el video.
-      </video> -->
-
-      <!-- OPCIÓN 2: Video de YouTube (reemplaza el link) -->
-      <video autoplay muted loop playsinline>
-        <source src="images/video-presentacion.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    <section class="features">
-      <div class="card">
-        <h3>🏡 Viviendas</h3>
-        <p>
-          Proyectos inmobiliarios, desarrollos habitacionales, casas prefabricadas,
-          construcción tradicional y soluciones innovadoras para el hogar.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>🛠️ Servicios</h3>
-        <p>
-          Empresas de construcción, arquitectura, financiación, seguros,
-          domótica, mantenimiento y servicios integrales para viviendas.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>🤝 Expositores</h3>
-        <p>
-          Marcas líderes del sector presentando productos, promociones,
-          asesoramiento profesional y oportunidades comerciales.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>📅 Próximo Lanzamiento</h3>
-        <p>
-          Muy pronto habilitaremos el acceso completo al sitio con agenda,
-          inscripción de expositores y toda la información del evento.
-        </p>
+        <div class="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60 shadow-2xl shadow-brandGreen/10">
+          <video id="expoVideoPlayer" class="h-full w-full object-cover" autoplay muted playsinline controls>
+            <source src="images/video-expo/EXPO1.mp4" type="video/mp4" />
+            Tu navegador no soporta video HTML5.
+          </video>
+        </div>
       </div>
     </section>
+
+    <section class="features mx-auto max-w-7xl px-5 py-12 md:px-8">
+      <div class="mb-6">
+        <h2 class="text-2xl font-bold text-white md:text-3xl">Áreas principales de la expo</h2>
+        <p class="mt-2 text-slate-400">Todo lo que vas a encontrar en un solo lugar: viviendas, servicios, expositores y novedades.</p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <div class="card rounded-2xl border border-white/10 bg-slate-900/70 p-6 transition hover:-translate-y-1 hover:border-brandGreen/60 hover:shadow-lg hover:shadow-brandGreen/10">
+          <h3 class="text-xl font-semibold text-white">🏡 Viviendas</h3>
+          <p class="mt-3 text-sm leading-relaxed text-slate-300">
+            Proyectos inmobiliarios, desarrollos habitacionales, casas prefabricadas,
+            construcción tradicional y soluciones innovadoras para el hogar.
+          </p>
+        </div>
+
+        <div class="card rounded-2xl border border-white/10 bg-slate-900/70 p-6 transition hover:-translate-y-1 hover:border-brandOrange/60 hover:shadow-lg hover:shadow-brandOrange/10">
+          <h3 class="text-xl font-semibold text-white">🛠️ Servicios</h3>
+          <p class="mt-3 text-sm leading-relaxed text-slate-300">
+            Empresas de construcción, arquitectura, financiación, seguros,
+            domótica, mantenimiento y servicios integrales para viviendas.
+          </p>
+        </div>
+
+        <div class="card rounded-2xl border border-white/10 bg-slate-900/70 p-6 transition hover:-translate-y-1 hover:border-brandGreen/60 hover:shadow-lg hover:shadow-brandGreen/10">
+          <h3 class="text-xl font-semibold text-white">🤝 Expositores</h3>
+          <p class="mt-3 text-sm leading-relaxed text-slate-300">
+            Marcas líderes del sector presentando productos, promociones,
+            asesoramiento profesional y oportunidades comerciales.
+          </p>
+        </div>
+
+        <div class="card rounded-2xl border border-white/10 bg-slate-900/70 p-6 transition hover:-translate-y-1 hover:border-brandOrange/60 hover:shadow-lg hover:shadow-brandOrange/10">
+          <h3 class="text-xl font-semibold text-white">📅 Próximo Lanzamiento</h3>
+          <p class="mt-3 text-sm leading-relaxed text-slate-300">
+            Muy pronto habilitaremos el acceso con toda la información sobre la fecha del evento,
+            inscripción de expositores y toda la información del evento.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="mx-auto max-w-7xl px-5 py-14 md:px-8">
+      <div class="mb-8 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-bold text-white md:text-3xl">Galería</h2>
+          <!-- <h2 class="text-2xl font-bold text-white md:text-3xl">Galería por categorías</h2> -->
+          <!-- <p class="mt-2 text-slate-400">Seleccioná una categoría y el carrusel mostrará sus imágenes automáticamente.</p> -->
+        </div>
+        <p class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-slate-300">
+          Cambio automático cada 4 segundos
+        </p>
+      </div>
+
+      <div id="categoryFilters" class="mb-7 flex flex-wrap gap-3"></div>
+
+      <div class="overflow-hidden rounded-2xl border border-white/10 bg-slate-900">
+        <div class="relative aspect-[16/8] w-full bg-slate-950">
+          <img id="carouselImage" src="images/fotos/1.jpg" alt="Imagen de la categoría" class="h-full w-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/75 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-5 md:p-7">
+            <p id="carouselCategory" class="mb-1 text-xs font-semibold uppercase tracking-wider text-brandGreen"></p>
+            <h3 id="carouselTitle" class="text-lg font-semibold text-white md:text-2xl"></h3>
+          </div>
+
+          <button id="prevBtn" class="absolute left-3 top-1/2 -translate-y-1/2 rounded-full border border-white/25 bg-black/30 px-3 py-2 text-xl text-white transition hover:border-brandGreen hover:text-brandGreen" aria-label="Imagen anterior">‹</button>
+          <button id="nextBtn" class="absolute right-3 top-1/2 -translate-y-1/2 rounded-full border border-white/25 bg-black/30 px-3 py-2 text-xl text-white transition hover:border-brandGreen hover:text-brandGreen" aria-label="Imagen siguiente">›</button>
+        </div>
+      </div>
+
+      <div id="thumbs" class="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4"></div>
+    </section>
+
+    <!-- <section id="marcas" class="border-y border-white/10 bg-slate-900/40">
+      <div class="mx-auto max-w-7xl px-5 py-14 md:px-8">
+        <h2 class="text-2xl font-bold text-white md:text-3xl">Marcas y empresas participantes</h2>
+        <p class="mt-2 max-w-2xl text-slate-400">Espacio pensado para constructoras, proveedores y empresas de servicios que exhiben sus novedades en la expo.</p>
+
+        <div class="mt-8 grid gap-4 md:grid-cols-3">
+          <article class="rounded-xl border border-white/10 bg-slate-950/70 p-5">
+            <p class="text-sm font-semibold text-brandOrange">Constructora destacada</p>
+            <h3 class="mt-2 text-lg font-semibold text-white">Urban Build Group</h3>
+            <p class="mt-2 text-sm text-slate-400">Soluciones integrales en obras residenciales, industriales y urbanizaciones.</p>
+          </article>
+          <article class="rounded-xl border border-white/10 bg-slate-950/70 p-5">
+            <p class="text-sm font-semibold text-brandGreen">Marca de hogar</p>
+            <h3 class="mt-2 text-lg font-semibold text-white">Casa Inteligente AR</h3>
+            <p class="mt-2 text-sm text-slate-400">Domótica, seguridad y eficiencia energética para viviendas modernas.</p>
+          </article>
+          <article class="rounded-xl border border-white/10 bg-slate-950/70 p-5">
+            <p class="text-sm font-semibold text-brandOrange">Servicios especializados</p>
+            <h3 class="mt-2 text-lg font-semibold text-white">Red Servicios 360</h3>
+            <p class="mt-2 text-sm text-slate-400">Arquitectura, financiación, seguros y asesoría para compra y construcción.</p>
+          </article>
+        </div>
+
+        <div id="brandsGallery" class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4"></div>
+      </div>
+    </section> -->
+
+    <!-- <section id="sponsors" class="mx-auto max-w-7xl px-5 py-14 md:px-8">
+      <h2 class="text-2xl font-bold text-white md:text-3xl">Sponsors oficiales</h2>
+      <p class="mt-2 text-slate-400">Empresas que impulsan el crecimiento del sector y acompañan esta edición.</p>
+
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="rounded-xl border border-white/10 bg-gradient-to-b from-brandGreen/15 to-transparent p-5">
+          <p class="text-xs uppercase tracking-wide text-brandGreen">Sponsor Platino</p>
+          <p class="mt-3 text-lg font-semibold text-white">Banco Hogar</p>
+        </div>
+        <div class="rounded-xl border border-white/10 bg-gradient-to-b from-brandOrange/15 to-transparent p-5">
+          <p class="text-xs uppercase tracking-wide text-brandOrange">Sponsor Oro</p>
+          <p class="mt-3 text-lg font-semibold text-white">TecnoMateriales</p>
+        </div>
+        <div class="rounded-xl border border-white/10 bg-gradient-to-b from-brandGreen/15 to-transparent p-5">
+          <p class="text-xs uppercase tracking-wide text-brandGreen">Sponsor Oro</p>
+          <p class="mt-3 text-lg font-semibold text-white">SegurHogar</p>
+        </div>
+        <div class="rounded-xl border border-white/10 bg-gradient-to-b from-brandOrange/15 to-transparent p-5">
+          <p class="text-xs uppercase tracking-wide text-brandOrange">Sponsor Plata</p>
+          <p class="mt-3 text-lg font-semibold text-white">EcoPanel Solutions</p>
+        </div>
+      </div>
+
+      <div id="sponsorsGallery" class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4"></div>
+    </section> -->
   </main>
 
-  <footer>
-    © 2026 Expo Viviendas & Servicios · Todos los derechos reservados · Sitio oficial en desarrollo
+  <footer id="contacto" class="border-t border-white/10 bg-slate-950">
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-3 px-5 py-8 text-sm text-slate-400 md:flex-row md:px-8">
+      <p>© 2026 Expo Viviendas & Servicios · Sitio oficial</p>
+      <!-- <p>Contacto: info@expoviviendas.com · +54 11 4000 0000</p> -->
+    </div>
   </footer>
+
+  <script>
+    const categories = [
+      { key: 'todas', label: 'Todas' },
+      // { key: 'viviendas', label: 'Viviendas' },
+      // { key: 'servicios', label: 'Servicios' },
+      // { key: 'construccion', label: 'Construcción' },
+      // { key: 'marcas', label: 'Marcas' },
+      // { key: 'sponsors', label: 'Sponsors' }
+    ];
+
+    function inferCategoryByIndex(index) {
+      if (index <= 12) return 'viviendas';
+      if (index <= 24) return 'servicios';
+      if (index <= 36) return 'construccion';
+      if (index <= 48) return 'marcas';
+      return 'sponsors';
+    }
+
+    function inferTitle(category, index) {
+      const label = categories.find(c => c.key === category)?.label ?? 'Galería';
+      return `${label} · Imagen ${index}`;
+    }
+
+    const galleryItems = Array.from({ length: 60 }, (_, pos) => {
+      const imageIndex = pos + 1;
+      const category = inferCategoryByIndex(imageIndex);
+      return {
+        category,
+        title: inferTitle(category, imageIndex),
+        src: `images/fotos/${imageIndex}.jpg`
+      };
+    });
+
+    const videoPlaylist = [
+      'images/video-expo/EXPO1.mp4',
+      'images/video-expo/EXPO2.mp4',
+      'images/video-expo/EXPO3.mp4',
+      'images/video-expo/EXPO4.mp4',
+      'images/video-expo/EXPO5.mp4'
+    ];
+
+    const expoVideoPlayer = document.getElementById('expoVideoPlayer');
+    let currentVideoIndex = 0;
+
+    const imageEl = document.getElementById('carouselImage');
+    const categoryEl = document.getElementById('carouselCategory');
+    const titleEl = document.getElementById('carouselTitle');
+    const filtersEl = document.getElementById('categoryFilters');
+    const thumbsEl = document.getElementById('thumbs');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const brandsGalleryEl = document.getElementById('brandsGallery');
+    const sponsorsGalleryEl = document.getElementById('sponsorsGallery');
+
+    let currentCategory = 'todas';
+    let visibleItems = [...galleryItems];
+    let currentIndex = 0;
+    let autoplayInterval;
+
+    const categoryStyles = {
+      active: 'bg-brandGreen text-white border-brandGreen',
+      inactive: 'bg-transparent text-slate-300 border-white/20 hover:border-brandOrange hover:text-brandOrange'
+    };
+
+    const normalizedLabel = (categoryKey) => categories.find(c => c.key === categoryKey)?.label ?? categoryKey;
+
+    function renderFilters() {
+      filtersEl.innerHTML = '';
+      categories.forEach(category => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.textContent = category.label;
+        button.className = `rounded-full border px-4 py-2 text-sm font-medium transition ${
+          currentCategory === category.key ? categoryStyles.active : categoryStyles.inactive
+        }`;
+        button.addEventListener('click', () => {
+          setCategory(category.key);
+          document.getElementById('galeria').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        filtersEl.appendChild(button);
+      });
+    }
+
+    function renderThumbs() {
+      thumbsEl.innerHTML = '';
+      visibleItems.forEach((item, index) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = `overflow-hidden rounded-lg border transition ${
+          index === currentIndex ? 'border-brandGreen' : 'border-white/10 hover:border-brandOrange'
+        }`;
+        button.innerHTML = `<img src="${item.src}" alt="${item.title}" class="h-20 w-full object-cover" />`;
+        button.addEventListener('click', () => {
+          currentIndex = index;
+          updateSlide();
+          resetAutoplay();
+        });
+        thumbsEl.appendChild(button);
+      });
+    }
+
+    function renderPhotoGrid(targetEl, items, caption) {
+      if (!targetEl) return;
+      targetEl.innerHTML = '';
+      items.forEach((item) => {
+        const card = document.createElement('article');
+        card.className = 'overflow-hidden rounded-xl border border-white/10 bg-slate-950/80';
+        card.innerHTML = `
+          <img src="${item.src}" alt="${item.title}" class="h-36 w-full object-cover" />
+          <div class="px-3 py-2 text-xs text-slate-300">${caption}</div>
+        `;
+        targetEl.appendChild(card);
+      });
+    }
+
+    function updateSlide() {
+      if (visibleItems.length === 0) {
+        imageEl.src = 'images/logo.png';
+        imageEl.alt = 'Sin imágenes cargadas';
+        categoryEl.textContent = 'Sin categoría';
+        titleEl.textContent = 'Agregá imágenes en la carpeta images y actualizá galleryItems.';
+        return;
+      }
+
+      const item = visibleItems[currentIndex];
+      imageEl.src = item.src;
+      imageEl.alt = item.title;
+      categoryEl.textContent = normalizedLabel(item.category);
+      titleEl.textContent = item.title;
+      renderThumbs();
+    }
+
+    function setCategory(categoryKey) {
+      currentCategory = categoryKey;
+      visibleItems = categoryKey === 'todas'
+        ? galleryItems
+        : galleryItems.filter(item => item.category === categoryKey);
+      currentIndex = 0;
+      renderFilters();
+      updateSlide();
+      resetAutoplay();
+    }
+
+    function goToNext() {
+      if (!visibleItems.length) return;
+      currentIndex = (currentIndex + 1) % visibleItems.length;
+      updateSlide();
+    }
+
+    function goToPrev() {
+      if (!visibleItems.length) return;
+      currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
+      updateSlide();
+    }
+
+    function resetAutoplay() {
+      clearInterval(autoplayInterval);
+      autoplayInterval = setInterval(goToNext, 4000);
+    }
+
+    nextBtn.addEventListener('click', () => {
+      goToNext();
+      resetAutoplay();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      goToPrev();
+      resetAutoplay();
+    });
+
+    function setupVideoPlaylist() {
+      if (!expoVideoPlayer || !videoPlaylist.length) return;
+
+      expoVideoPlayer.src = videoPlaylist[currentVideoIndex];
+
+      expoVideoPlayer.addEventListener('ended', () => {
+        currentVideoIndex = (currentVideoIndex + 1) % videoPlaylist.length;
+        expoVideoPlayer.src = videoPlaylist[currentVideoIndex];
+        expoVideoPlayer.play().catch(() => {});
+      });
+    }
+
+    setupVideoPlaylist();
+
+    renderFilters();
+    updateSlide();
+    resetAutoplay();
+
+    renderPhotoGrid(
+      brandsGalleryEl,
+      galleryItems.filter(item => item.category === 'marcas').slice(0, 8),
+      'Marcas participantes'
+    );
+
+    renderPhotoGrid(
+      sponsorsGalleryEl,
+      galleryItems.filter(item => item.category === 'sponsors').slice(0, 8),
+      'Sponsors y alianzas'
+    );
+  </script>
 </body>
 </html>

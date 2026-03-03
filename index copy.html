@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expo Viviendas & Servicios | Próximamente</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f172a, #020617);
+      color: #e5e7eb;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      background: rgba(59, 130, 246, 0.15);
+      color: #93c5fd;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      background: linear-gradient(90deg, #ffffff, #94a3b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p.subtitle {
+      font-size: 18px;
+      color: #cbd5f5;
+      max-width: 700px;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    .video-wrapper {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      margin-bottom: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .video-wrapper video,
+    .video-wrapper iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      background: #000;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 25px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(59, 130, 246, 0.4);
+      box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #f1f5f9;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+      color: #64748b;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 34px;
+      }
+
+      .video-wrapper video,
+      .video-wrapper iframe {
+        height: 260px;
+      }
+
+      header {
+        padding: 16px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <!-- REEMPLAZA el src con tu logo -->
+      <img src="images/logo.png" alt="Logo Expo Viviendas" />
+      <span>Expo Viviendas & Servicios</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="badge">Sitio en construcción</div>
+
+    <h1>Próximamente: La Gran Expo de Viviendas, Servicios y Construcción 2026</h1>
+
+    <p class="subtitle">
+      Estamos preparando una experiencia única donde vas a encontrar las mejores soluciones en viviendas,
+      construcción, servicios, tecnología y oportunidades para el hogar y la inversión.
+      Muy pronto podrás explorar expositores, proyectos y novedades del sector en un solo lugar.
+    </p>
+
+    <div class="video-wrapper">
+      <!-- OPCIÓN 1: Video local -->
+      <!-- <video controls autoplay muted loop>
+        <source src="video.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+      </video> -->
+
+      <!-- OPCIÓN 2: Video de YouTube (reemplaza el link) -->
+      <video autoplay muted loop playsinline>
+        <source src="images/video-presentacion.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <section class="features">
+      <div class="card">
+        <h3>🏡 Viviendas</h3>
+        <p>
+          Proyectos inmobiliarios, desarrollos habitacionales, casas prefabricadas,
+          construcción tradicional y soluciones innovadoras para el hogar.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🛠️ Servicios</h3>
+        <p>
+          Empresas de construcción, arquitectura, financiación, seguros,
+          domótica, mantenimiento y servicios integrales para viviendas.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🤝 Expositores</h3>
+        <p>
+          Marcas líderes del sector presentando productos, promociones,
+          asesoramiento profesional y oportunidades comerciales.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>📅 Próximo Lanzamiento</h3>
+        <p>
+          Muy pronto habilitaremos el acceso con toda la información sobre la fecha del evento,
+          inscripción de expositores y toda la información del evento.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Expo Viviendas & Servicios · Todos los derechos reservados · Sitio oficial en desarrollo
+  </footer>
+</body>
+</html>
